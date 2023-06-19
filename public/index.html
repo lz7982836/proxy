@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    <%= htmlWebpackPlugin.options.title%>
+  </title>
+</head>
+
+<body class=" bg-pink-400">
+  <!-- 加载js和css哪一个会阻塞页面的加载 -->
+  <!-- 页面加载的流程是怎么样的 -->
+  <!-- script标签defer async prefetch分别什么作用，什么时候使用 -->
+  <% htmlWebpackPlugin.options.cdn.script.forEach(function (item) {%>
+    <script src="<%=item%>"></script>
+    <%})%>
+      <div class="cot">hahah </div>
+      <div class="a w-28 h-28 bg-red-300 text-[40px] text-center">
+        test successful!
+      </div>
+</body>
+
+</html>
